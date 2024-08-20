@@ -1,0 +1,27 @@
+<div [ngClass]="{'dark-mode': darkMode, 'light-mode': !darkMode}">
+  <input matInput placeholder="Search by title" [(ngModel)]="searchTerm" (input)="filterProjects()">
+  
+  <div *ngIf="filteredData.length > 0">
+    <mat-card *ngFor="let project of filteredData">
+      <mat-card-header>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="project.imageSrc" [alt]="project.title" style="width: 50%">
+      <mat-card-actions>
+        <button mat-icon-button (click)="like(project.id)" 
+                [id]="'project-' + project.id" 
+                color="accent" class="iconsize">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" 
+          [routerLink]="['/project', project.id]">
+          See more about project
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div *ngIf="filteredData.length === 0 && searchTerm">
+    <p>No projects found.</p>
+  </div>
+</div>

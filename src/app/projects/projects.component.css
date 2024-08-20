@@ -1,0 +1,11 @@
+.dark-mode mat-card {
+    background-color: var(--dark-background);
+    
+  }
+  
+  .light-mode mat-card {
+    background-color: var(--background);
+    }
+    .dark-mode mat-card-subtitle {
+        color: lightcoral; /* Change this to your desired light orange color */
+      }

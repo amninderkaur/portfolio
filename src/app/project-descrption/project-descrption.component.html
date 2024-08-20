@@ -1,0 +1,12 @@
+<div [ngClass]="{'dark-mode': darkMode, 'light-mode': !darkMode}">
+    <div *ngIf="foundProject">
+      <h1>{{ foundProject.title }}</h1>
+      <p>{{foundProject.subtitle}}</p>
+      <img [src]="foundProject.imageSrc" [alt]="foundProject.title" style="width: 50%">
+      <p>{{ foundProject.description }}</p>
+    </div>
+    <div *ngIf="!foundProject">
+      <p>No project found.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,140 @@
+:root {
+    --accent: #ff5722;
+    --background: #fff3e0;
+    --highlight-color: #ff8a65;
+    --main-color: #bf360c;
+    --radius: 0.5em;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --text-color: #3e2723;
+    --dark-background: #212121;
+    --dark-text-color: #e0e0e0;
+    --dark-accent: #ff7043;
+    --dark-highlight-color: #ffab91;
+    --dark-shadow-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark-mode {
+    background-color:  var(--dark-background);
+    color: var(--dark-text-color);
+  }
+  
+  .light-mode {
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+  
+  html, body {
+    font: 20px 'Helvetica', sans-serif;
+    text-align: center;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  header {
+    border: var(--radius) solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em var(--shadow-color);
+    margin: var(--radius);
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+    background-color: var(--background);
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  footer {
+    border: var(--radius) solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em var(--shadow-color);
+    margin: var(--radius);
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+    background-color: var(--background);
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  nav {
+    background-color: var(--highlight-color);
+    border: var(--radius) solid var(--accent);
+    border-radius: 10px;
+    box-shadow: 0.5em 0.5em var(--shadow-color);
+    margin: var(--radius);
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  a:hover {
+    background-color: var(--main-color);
+    color: var(--background);
+    padding: 0.4em;
+  }
+  
+  footer address a {
+    background-color: var(--accent);
+  }
+  
+  .dark-mode header,
+  .dark-mode footer,
+  .dark-mode nav {
+    background-color: var(--dark-background);
+    border-color: var(--dark-accent);
+    box-shadow: 0.5em 0.5em var(--dark-shadow-color);
+    color: var(--dark-text-color);
+  }
+  
+  .dark-mode a:hover {
+    background-color: var(--dark-main-color);
+    color: var(--dark-background);
+  }
+  
+  .dark-mode footer address a {
+    background-color: var(--dark-accent);
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--accent);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+

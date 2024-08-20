@@ -1,0 +1,23 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+<div [ngClass]="{'dark-mode': darkMode, 'light-mode': !darkMode}" class="mode-container">
+    <h5>Choose</h5>
+    <label class="switch">
+      <input type="checkbox" [(ngModel)]="darkMode" (change)="toggleDarkMode()">
+      <span class="slider round"></span>
+    </label>
+    <p>Dark Mode: {{ darkMode ? 'On' : 'Off' }}</p>
+  </div>
+<br>
+<app-header  [darkMode]="darkMode"></app-header>
+<br>
+<app-about  [darkMode]="darkMode"></app-about>
+<br>
+<router-outlet></router-outlet>
+<br>
+<app-projects [darkMode]="darkMode"></app-projects>
+
+<br>
+<app-contact [darkMode]="darkMode"></app-contact>
+<br>
+<app-footer [darkMode]="darkMode"></app-footer>

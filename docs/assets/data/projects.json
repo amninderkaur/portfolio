@@ -1,0 +1,39 @@
+ [
+      {
+        "id": 1,
+        "title": "Database Project",
+        "subtitle": "Making a database for hospital",
+        "imageSrc": "assets/images/databare.png",
+        "description": "First we made ER diagrams, then made tables in Microsoft SQL Server and then made its NoSQL version."
+      },
+      {
+        "id": 2,
+        "title": "Websites",
+        "subtitle": "Basics of HTML and CSS",
+        "imageSrc": "assets/images/html.png",
+        "description": "Made a website from scratch by providing details about ourselves."
+      },
+      {
+        "id": 3,
+        "title": "Python Program",
+        "subtitle": "Used Turtle in Python to show graphics",
+        "imageSrc": "assets/images/python.png",
+        "description": "Creating programs in Python using basic graphics."
+      },
+      {
+        "id": 4,
+        "title": "JavaScript Website",
+        "subtitle": "Plates info by hovering over the button with planet name",
+        "imageSrc": "assets/images/javascript.png",
+        "description": "Developed a website using JavaScript, HTML, and CSS, where users can hover over buttons with planet names to view related information."
+      },
+      {
+        "id": 5,
+        "title": "Express.js Website",
+        "subtitle": "Collects data from students and stores it by connecting to a database",
+        "imageSrc": "assets/images/express.png",
+        "description": "Built a website that collects data from students and stores it in a database."
+      }
+    ]
+  
+  
